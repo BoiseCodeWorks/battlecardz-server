@@ -172,7 +172,7 @@ function start(req, res, next) {
             }
         }
         var game = startGame(gameConfig)
-        res.send(game)
+        res.send({ message: "ready", game })
     } catch (e) {
         res.status(400).send({ error: e })
     }
